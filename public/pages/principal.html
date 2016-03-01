@@ -1,0 +1,15 @@
+ <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Portal Pravaler Test</h1>
+            </div>
+<div class="row col-md-10">
+    <form>
+        <input type="text" name="pesquisa" class="form-control" placeholder="digite caso queira filtrar" ng-model="filtro">
+    </form>
+</div>
+<div class="row">
+    <meu-painel ng-repeat="foto in fotos|filter:filtro" titulo="{{foto.titulo}}" class="col-md-3">
+        <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
+    </meu-painel>
+</div><!-- fim row -->
+</div>
